@@ -18,8 +18,8 @@ function count(arr, element)
   return promise;
 }
 
-async function recieve(arr, element) 
+async function recieve(arr, element, callback)
 {
-  const result = await count(arr, element);
-  return result;
+  let total = await callback(arr, element);
+  callback(total);
 }
