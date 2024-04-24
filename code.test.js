@@ -12,7 +12,7 @@ let test3 = [2,5,4,3];
 let test4 = [0];
 let test5 = [0, 1, 2, 3, 4, 5, 6, 7];
 let test6 = [1,2,3,4];
-let test7 = [10,12,100,34,8,1;00]
+let test7 = [10,12,100,34,8,100];
 
 recieve(test1, 1, function(value) {
   assert(value === 3)
