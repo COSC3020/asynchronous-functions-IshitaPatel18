@@ -20,6 +20,6 @@ function count(arr, element)
 
 async function recieve(arr, element, callback)
 {
-  let total = await callback(arr, element);
+  let total = await count(arr, element);
   callback(total);
 }
