@@ -17,7 +17,7 @@ function regular(arr, element) {
 
 const test =
     jsc.forall("array nat", "nat", function(arr, n) {
-        return JSON.stringify(regular(arr, n) ==
+        return JSON.stringify(regular(arr, n)) ==
             JSON.stringify(output(arr, n));
     });
 jsc.assert(test);
