@@ -21,3 +21,15 @@ this.
 
 What is the time complexity of your implementation (worst-case $\Theta$)? Add
 your answer, including your reasoning, to this markdown file.
+
+This implementation uses callbacks for its asynchronous execution. Even though 
+this implementation is not running in parallel, I broke the array down into sections
+according to what is the best number of threads to have running in parallel. There is one
+for loop that is running for $\sqrt{n}$ as it divides the given array into chunks and then
+calls the callback function with the piece and the element desired. Then the callback function
+has a for loop that goes through each section and totals the occurence of the desired element
+and returns it, to continue the summation in the other for loop. The callback for loop runs 
+for n because it will iterate over the whole array, even if it is iterating over smaller sections
+at first. All of the variable initalizations are constant time, so they can be dropped. Putting
+it together we get $n + \sqrt{n}$ and we can drop the $\sqrt{n}$ as in this case it is a lower
+order term. Therefore, the worst-case $\Theta$ complexity of this implementation is $\Theta(n)$.
